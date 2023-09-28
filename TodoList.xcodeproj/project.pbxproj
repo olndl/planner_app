@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7552343E2AC4C5C7000DD6BC /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7552343D2AC4C5C7000DD6BC /* TodoListApp.swift */; };
-		755234402AC4C5C7000DD6BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7552343F2AC4C5C7000DD6BC /* ContentView.swift */; };
+		755234402AC4C5C7000DD6BC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7552343F2AC4C5C7000DD6BC /* MainView.swift */; };
 		755234422AC4C5C8000DD6BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755234412AC4C5C8000DD6BC /* Assets.xcassets */; };
 		755234452AC4C5C8000DD6BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755234442AC4C5C8000DD6BC /* Preview Assets.xcassets */; };
 		759282422AC61D8F00348010 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 759282412AC61D8F00348010 /* FirebaseAuth */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		7552343A2AC4C5C7000DD6BC /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7552343D2AC4C5C7000DD6BC /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
-		7552343F2AC4C5C7000DD6BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7552343F2AC4C5C7000DD6BC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		755234412AC4C5C8000DD6BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		755234442AC4C5C8000DD6BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		759282472AC621D500348010 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -59,10 +59,11 @@
 		7552343C2AC4C5C7000DD6BC /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
-				759282472AC621D500348010 /* GoogleService-Info.plist */,
-				7552343D2AC4C5C7000DD6BC /* TodoListApp.swift */,
-				7552343F2AC4C5C7000DD6BC /* ContentView.swift */,
-				755234412AC4C5C8000DD6BC /* Assets.xcassets */,
+				7592824D2AC62B6A00348010 /* Assets */,
+				7592824C2AC62B2100348010 /* Config */,
+				7592824B2AC62A3000348010 /* View */,
+				7592824A2AC62A2300348010 /* ViewModel */,
+				759282492AC6299D00348010 /* Model */,
 				755234432AC4C5C8000DD6BC /* Preview Content */,
 			);
 			path = TodoList;
@@ -74,6 +75,45 @@
 				755234442AC4C5C8000DD6BC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		759282492AC6299D00348010 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7592824A2AC62A2300348010 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7592824B2AC62A3000348010 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7552343F2AC4C5C7000DD6BC /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7592824C2AC62B2100348010 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				759282472AC621D500348010 /* GoogleService-Info.plist */,
+				7552343D2AC4C5C7000DD6BC /* TodoListApp.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7592824D2AC62B6A00348010 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				755234412AC4C5C8000DD6BC /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				755234402AC4C5C7000DD6BC /* ContentView.swift in Sources */,
+				755234402AC4C5C7000DD6BC /* MainView.swift in Sources */,
 				7552343E2AC4C5C7000DD6BC /* TodoListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
