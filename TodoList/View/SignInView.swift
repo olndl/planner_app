@@ -26,11 +26,13 @@ struct SignInView: View {
                         }
                     }
                 }
+                .cornerRadius(12)
+                .frame(width: UIScreen.main.bounds.width - 20)
                 // create account
                 VStack{
                     Text("New around here?")
                     
-                    NavigationLink("Crerate an account", destination: SignUpView())
+                    NavigationLink("Create an account", destination: SignUpView())
                     
                 }.padding(.bottom, 50)
                 Spacer()
