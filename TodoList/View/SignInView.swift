@@ -1,15 +1,41 @@
-//
-//  SignInView.swift
-//  TodoList
-//
-//  Created by Ольга Ширявцева on 29.09.2023.
-//
-
 import SwiftUI
 
 struct SignInView: View {
+    
+    @State var email = ""
+    @State var password = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                // Header
+                HeaderView()
+                // SignIn form
+                Form{
+                    TextField("Email", text: $email).textFieldStyle(DefaultTextFieldStyle())
+                    SecureField("Password", text: $password)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                    Button{
+                        
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10).foregroundColor(Color.blue)
+                            Text("Sign In")
+                                .foregroundColor(Color.white)
+                                .bold()
+                        }
+                    }
+                }
+                // create account
+                VStack{
+                    Text("New around here?")
+                    
+                    NavigationLink("Crerate an account", destination: SignUpView())
+                    
+                }.padding(.bottom, 50)
+                Spacer()
+            }
+        }
     }
 }
 
