@@ -9,29 +9,30 @@ struct SignInView: View {
         NavigationView{
             VStack{
                 // Header
-                HeaderView()
+                VStack{
+                    HeaderView(title: "My Planner", subtitle: "Get Things Done", backgroundColor: Color.teal, cornerRadius: 0, angle: -15)
+                }
                 // SignIn form
                 Form{
                     TextField("Email", text: $email).textFieldStyle(DefaultTextFieldStyle())
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
                     SecureField("Password", text: $password)
                         .textFieldStyle(DefaultTextFieldStyle())
-                    Button{
-                        
-                    } label: {
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 10).foregroundColor(Color.blue)
-                            Text("Sign In")
-                                .foregroundColor(Color.white)
-                                .bold()
-                        }
-                    }
+                    CustomButtonView(title: "Sign In", backgroundColor: .blue, action: {
+                        //sign in
+                    })
+            
                 }
+                .cornerRadius(12)
+                .frame(width: UIScreen.main.bounds.width - 20, height: 300)
+                .offset(y: -100)
                 // create account
                 VStack{
                     Text("New around here?")
-                    
-                    NavigationLink("Crerate an account", destination: SignUpView())
-                    
+
+                    NavigationLink("Create an account", destination: SignUpView())
+
                 }.padding(.bottom, 50)
                 Spacer()
             }
