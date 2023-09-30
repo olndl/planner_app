@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751FC9742AC88C0B00CD8549 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC9732AC88C0B00CD8549 /* CustomButtonView.swift */; };
 		7552343E2AC4C5C7000DD6BC /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7552343D2AC4C5C7000DD6BC /* TodoListApp.swift */; };
 		755234402AC4C5C7000DD6BC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7552343F2AC4C5C7000DD6BC /* MainView.swift */; };
 		755234422AC4C5C8000DD6BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755234412AC4C5C8000DD6BC /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751FC9732AC88C0B00CD8549 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		7552343A2AC4C5C7000DD6BC /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7552343D2AC4C5C7000DD6BC /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
 		7552343F2AC4C5C7000DD6BC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				759282562AC62E9D00348010 /* SignUpView.swift */,
 				759282582AC62F0500348010 /* TodoListItemView.swift */,
 				7592826C2AC63B2100348010 /* HeaderView.swift */,
+				751FC9732AC88C0B00CD8549 /* CustomButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751FC9742AC88C0B00CD8549 /* CustomButtonView.swift in Sources */,
 				759282552AC62E9000348010 /* SignInView.swift in Sources */,
 				7592826D2AC63B2100348010 /* HeaderView.swift in Sources */,
 				7592826B2AC6301D00348010 /* TodoListItemViewViewModel.swift in Sources */,
