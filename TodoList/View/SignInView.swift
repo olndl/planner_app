@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct SignInView: View {
-    
-    @State var email = ""
-    @State var password = ""
+
+    @StateObject var viewModel = SignInViewViewModel()
     
     var body: some View {
         NavigationView{
@@ -14,13 +13,17 @@ struct SignInView: View {
                 }
                 // SignIn form
                 Form{
-                    TextField("Email", text: $email).textFieldStyle(DefaultTextFieldStyle())
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage).foregroundColor(Color.red)
+                    }
+                    TextField("Email", text: $viewModel.email).textFieldStyle(DefaultTextFieldStyle())
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     CustomButtonView(title: "Sign In", backgroundColor: .blue, action: {
                         //sign in
+                        viewModel.login()
                     })
             
                 }

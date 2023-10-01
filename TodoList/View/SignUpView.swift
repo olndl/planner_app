@@ -8,23 +8,26 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State var name = ""
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = SignUpViewViewModel()
+    
     var body: some View {
         VStack{
             HeaderView(title: "Sign Up", subtitle: "Start organizing your plans", backgroundColor: Color.pink, cornerRadius: 0, angle: 15)
             Form{
-                TextField("Full Name", text: $name)
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage).foregroundColor(Color.red)
+                }
+                TextField("Full Name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
-                TextField("Email", text: $email).textFieldStyle(DefaultTextFieldStyle())
+                TextField("Email", text: $viewModel.email).textFieldStyle(DefaultTextFieldStyle())
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
                 CustomButtonView(title: "Create account", backgroundColor: .green, action: {
                     //sign up
+                    viewModel.register()
                 })
             
             }
