@@ -10,14 +10,28 @@ import SwiftUI
 struct MainView: View {
     @StateObject var viewModel = MainViewViewModel()
     var body: some View {
-        NavigationView() {
+        NavigationView{
             if viewModel.isSignIn, !viewModel.currentUserId.isEmpty {
-                TodoListView()
+               accountView
             } else {
-               SignInView()
+               //SignInView()
+                Login()
             }
         }
 
+    }
+    @ViewBuilder
+    var accountView: some View {
+        TabView{
+            TodoListView(userId: viewModel.currentUserId)
+                .tabItem(){
+                    Label("Home", systemImage: "house")
+                }
+            ProfileView()
+                .tabItem(){
+                    Label("Profile", systemImage: "person")
+                }
+        }
     }
 }
 
