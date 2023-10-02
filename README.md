@@ -6,12 +6,20 @@ The app allows you to create an account and login to create tasks and organize t
 
 ## Screenshots
 
-https://github.com/olndl/planner_app/assets/82782889/785782f5-8cec-42de-8e4b-3f15b69e943e
+
+
+https://github.com/olndl/planner_app/assets/82782889/8f6c116a-a85d-442c-aafe-f2f95ca0e91c
+
+
 
 **with Phone Auth:**
 
 
-https://github.com/olndl/planner_app/assets/82782889/8cd174b8-0d1e-402f-8fac-dabdc483b019
+
+
+https://github.com/olndl/planner_app/assets/82782889/eb092b09-9720-420c-8473-99badd910355
+
+
 
 
 
