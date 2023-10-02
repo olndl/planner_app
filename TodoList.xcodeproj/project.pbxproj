@@ -33,6 +33,11 @@
 		7592826B2AC6301D00348010 /* TodoListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7592826A2AC6301D00348010 /* TodoListItemViewViewModel.swift */; };
 		7592826D2AC63B2100348010 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7592826C2AC63B2100348010 /* HeaderView.swift */; };
 		75999EE62AC9ADE60046B88E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75999EE52AC9ADE60046B88E /* Extensions.swift */; };
+		75999EEE2ACA60230046B88E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75999EED2ACA60230046B88E /* LoginView.swift */; };
+		75999EF12ACA607F0046B88E /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 75999EF02ACA607F0046B88E /* SwiftUIX */; };
+		75999EF32ACA61110046B88E /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75999EF22ACA61110046B88E /* LoginViewViewModel.swift */; };
+		75999EF52ACA61850046B88E /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75999EF42ACA61850046B88E /* VerificationView.swift */; };
+		75999EF72ACA62560046B88E /* ConfirmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75999EF62ACA62560046B88E /* ConfirmedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		7592826A2AC6301D00348010 /* TodoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListItemViewViewModel.swift; sourceTree = "<group>"; };
 		7592826C2AC63B2100348010 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		75999EE52AC9ADE60046B88E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		75999EED2ACA60230046B88E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		75999EF22ACA61110046B88E /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		75999EF42ACA61850046B88E /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
+		75999EF62ACA62560046B88E /* ConfirmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmedView.swift; sourceTree = "<group>"; };
+		75999EF82ACA667C0046B88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,7 @@
 				759282422AC61D8F00348010 /* FirebaseAuth in Frameworks */,
 				759282442AC61D8F00348010 /* FirebaseFirestore in Frameworks */,
 				759282462AC61D8F00348010 /* FirebaseFirestoreSwift in Frameworks */,
+				75999EF12ACA607F0046B88E /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +106,7 @@
 		7552343C2AC4C5C7000DD6BC /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				75999EF82ACA667C0046B88E /* Info.plist */,
 				7592824D2AC62B6A00348010 /* Assets */,
 				7592824C2AC62B2100348010 /* Config */,
 				7592824B2AC62A3000348010 /* View */,
@@ -132,6 +144,7 @@
 				759282662AC62FFC00348010 /* SignInViewViewModel.swift */,
 				759282682AC6300900348010 /* SignUpViewViewModel.swift */,
 				7592826A2AC6301D00348010 /* TodoListItemViewViewModel.swift */,
+				75999EF22ACA61110046B88E /* LoginViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,6 +161,9 @@
 				759282582AC62F0500348010 /* TodoListItemView.swift */,
 				7592826C2AC63B2100348010 /* HeaderView.swift */,
 				751FC9732AC88C0B00CD8549 /* CustomButtonView.swift */,
+				75999EED2ACA60230046B88E /* LoginView.swift */,
+				75999EF42ACA61850046B88E /* VerificationView.swift */,
+				75999EF62ACA62560046B88E /* ConfirmedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +206,7 @@
 				759282412AC61D8F00348010 /* FirebaseAuth */,
 				759282432AC61D8F00348010 /* FirebaseFirestore */,
 				759282452AC61D8F00348010 /* FirebaseFirestoreSwift */,
+				75999EF02ACA607F0046B88E /* SwiftUIX */,
 			);
 			productName = TodoList;
 			productReference = 7552343A2AC4C5C7000DD6BC /* TodoList.app */;
@@ -221,6 +238,7 @@
 			mainGroup = 755234312AC4C5C6000DD6BC;
 			packageReferences = (
 				759282402AC61D8F00348010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				75999EEF2ACA607F0046B88E /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 7552343B2AC4C5C7000DD6BC /* Products */;
 			projectDirPath = "";
@@ -260,10 +278,14 @@
 				759282572AC62E9D00348010 /* SignUpView.swift in Sources */,
 				759282612AC62FC400348010 /* ProfileViewViewModel.swift in Sources */,
 				759282652AC62FED00348010 /* NewTodoViewViewModel.swift in Sources */,
+				75999EF32ACA61110046B88E /* LoginViewViewModel.swift in Sources */,
 				759282512AC62E4200348010 /* TodoListView.swift in Sources */,
+				75999EF52ACA61850046B88E /* VerificationView.swift in Sources */,
 				759282672AC62FFC00348010 /* SignInViewViewModel.swift in Sources */,
 				7592825B2AC62F5300348010 /* User.swift in Sources */,
+				75999EF72ACA62560046B88E /* ConfirmedView.swift in Sources */,
 				759282632AC62FD500348010 /* TodoListViewViewModel.swift in Sources */,
+				75999EEE2ACA60230046B88E /* LoginView.swift in Sources */,
 				75999EE62AC9ADE60046B88E /* Extensions.swift in Sources */,
 				759282592AC62F0500348010 /* TodoListItemView.swift in Sources */,
 				759282532AC62E7400348010 /* NewTodoView.swift in Sources */,
@@ -400,6 +422,7 @@
 				DEVELOPMENT_TEAM = 9Q7SS8F4K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +451,7 @@
 				DEVELOPMENT_TEAM = 9Q7SS8F4K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,6 +501,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		75999EEF2ACA607F0046B88E /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -494,6 +526,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 759282402AC61D8F00348010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		75999EF02ACA607F0046B88E /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75999EEF2ACA607F0046B88E /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

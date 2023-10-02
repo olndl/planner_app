@@ -18,8 +18,14 @@ struct CustomButtonView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 10).foregroundColor(backgroundColor)
                 Text(title)
-                    .foregroundColor(Color.white)
                     .bold()
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, maxHeight: 60)
+                    .background(Color("Primary"))
+                    .cornerRadius(6)
+                    .shadow(color: Color("Primary").opacity(0.8), radius: 6, x: 1, y: 1)
             }
         }
         .padding()
