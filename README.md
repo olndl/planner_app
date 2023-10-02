@@ -1,6 +1,6 @@
 # planner_app
 
-Planner App is a simple to do app developed with SwiftUI and Firebaseusing Clean Architecture and MVVM. 
+Planner App is a simple to do app developed with SwiftUI and Firebase using Clean Architecture and MVVM. 
 The app allows you to create an account and login to create tasks and organize them into lists. 
 
 
